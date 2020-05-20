@@ -1,0 +1,249 @@
+header .header-wrap .header_heading::before, main::before {
+  z-index: -1;
+  position: absolute;
+  content: '';
+  background: #fe4e33; }
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  margin: 0;
+  background-color: #21232e; }
+
+header {
+  border-bottom-right-radius: 630px 290px;
+  background-position: center;
+  background-size: auto;
+  background-image: url(../img/m-h-night.jpg);
+  overflow: hidden;
+  padding-bottom: 180px;
+  padding-top: 20px; }
+  header .header-wrap {
+    width: 1264px;
+    margin-left: auto;
+    margin-right: auto; }
+    header .header-wrap .landing-logo {
+      display: flex;
+      align-items: center;
+      color: white; }
+      header .header-wrap .landing-logo p {
+        font-weight: bold;
+        margin: 0;
+        padding-left: 16px;
+        font-family: "Fresca", sans-serif;
+        font-size: 24px;
+        line-height: 26px; }
+        header .header-wrap .landing-logo p span {
+          font-family: "Fresca", sans-serif;
+          display: block;
+          font-size: 11px;
+          text-align: center;
+          line-height: 12px;
+          letter-spacing: -0.5px; }
+    header .header-wrap .header_heading {
+      position: relative;
+      z-index: 2;
+      margin-top: 80px;
+      margin-bottom: 40px;
+      width: 500px;
+      line-height: 1;
+      letter-spacing: 2px;
+      font-size: 70px;
+      font-weight: bold;
+      color: white; }
+      header .header-wrap .header_heading::before {
+        top: 90px;
+        width: 309px;
+        height: 52px; }
+    header .header-wrap .header_text {
+      display: block;
+      font-family: "Fresca", sans-serif;
+      white-space: pre-line;
+      text-align: left;
+      letter-spacing: 0.4px;
+      color: white;
+      margin-bottom: 61px;
+      line-height: 25px; }
+    header .header-wrap .header_button {
+      background-color: #e3ac00;
+      border: none;
+      color: white;
+      padding: 15px 46px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 17px;
+      font-weight: bold;
+      font-family: "Source Sans Pro", sans-serif; }
+    header .header-wrap .login {
+      font-family: "Source Sans Pro", sans-serif;
+      padding-left: 153px;
+      color: white;
+      font-size: 21px;
+      word-spacing: -0.3px; }
+
+main {
+  overflow: hidden; }
+  main .section_text {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    font-size: 43px;
+    font-weight: 600;
+    font-family: "Source Sans Pro", sans-serif;
+    color: white;
+    line-height: 40px; }
+  main::before {
+    top: 774px;
+    left: 798px;
+    width: 196px;
+    height: 52px; }
+  main .section_card_wrap {
+    width: 990px;
+    margin: 0 auto; }
+    main .section_card_wrap .section_card {
+      padding: 20px;
+      background-color: #3b3f50;
+      margin: 27px 30px;
+      display: flex;
+      justify-content: space-between;
+      border-radius: 7px; }
+      main .section_card_wrap .section_card:nth-child(1) .section_card_img {
+        width: 310px; }
+      main .section_card_wrap .section_card:nth-child(2) .section_card_img {
+        width: 300px; }
+      main .section_card_wrap .section_card:nth-child(3) .section_card_img {
+        width: 332px; }
+      main .section_card_wrap .section_card .section_card_img {
+        flex-shrink: 0;
+        height: 240px;
+        border-radius: 5px; }
+      main .section_card_wrap .section_card .section_card_right_container {
+        text-align: center;
+        width: 70%;
+        margin: 0 84px 0; }
+        main .section_card_wrap .section_card .section_card_right_container:nth-child(2) .section_card_heading {
+          font-family: "Source Sans Pro", sans-serif; }
+        main .section_card_wrap .section_card .section_card_right_container .section_card_heading {
+          font-weight: 600;
+          font-family: "Fresca", sans-serif;
+          font-size: 24px;
+          color: white;
+          letter-spacing: 0.1px;
+          word-spacing: -1px;
+          margin-top: 29px; }
+        main .section_card_wrap .section_card .section_card_right_container .section_card_text {
+          font-size: 18px;
+          text-align: justify;
+          line-height: 23px;
+          letter-spacing: -0.6px;
+          margin-bottom: 15px;
+          word-spacing: 1px;
+          font-family: "Fresca", sans-serif;
+          color: #d1d1d1; }
+        main .section_card_wrap .section_card .section_card_right_container .section_link {
+          font-family: "Source Sans Pro", sans-serif;
+          color: #d1d1d1; }
+  main .section_banner {
+    display: flex;
+    border-radius: 5px;
+    margin-top: 144px;
+    height: 150px;
+    background: linear-gradient(to right, #e1a902, #97344e);
+    width: 988px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative; }
+    main .section_banner:before {
+      content: '';
+      width: 100vw;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%);
+      height: 50%;
+      bottom: 0;
+      background-color: #3b3f50;
+      z-index: -1; }
+    main .section_banner .section_banner_text_wrap {
+      width: 631px; }
+      main .section_banner .section_banner_text_wrap::after {
+        z-index: 1;
+        position: absolute;
+        content: '';
+        background: #fe4e33;
+        margin-top: -102px;
+        margin-left: 229px;
+        width: 67px;
+        height: 48px; }
+      main .section_banner .section_banner_text_wrap .section_banner_heading {
+        position: relative;
+        z-index: 2;
+        margin-top: 20px;
+        font-family: "Source Sans Pro", sans-serif;
+        font-size: 31px;
+        font-weight: bold;
+        text-align: center;
+        word-spacing: -0.6px;
+        color: white;
+        margin-bottom: 10px; }
+      main .section_banner .section_banner_text_wrap .section_banner_text {
+        margin-top: 20px;
+        margin-left: 106px;
+        font-family: "Fresca", sans-serif;
+        color: #d1d1d1;
+        word-spacing: 2px; }
+    main .section_banner .section_banner_button {
+      margin: 49px 106px;
+      background-color: #e3ac00;
+      border: none;
+      color: white;
+      padding: 15px 46px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 17px;
+      font-weight: bold;
+      font-family: "Source Sans Pro", sans-serif; }
+
+footer {
+  margin: 0;
+  background-color: #3b3f50; }
+  footer .footer-wrap {
+    width: 1264px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 171px;
+    display: flex;
+    color: #fff; }
+    footer .footer-wrap .footer_logo {
+      display: flex;
+      align-items: center;
+      margin-top: -5px;
+      color: #d1d1d1; }
+      footer .footer-wrap .footer_logo p {
+        font-weight: bold;
+        margin: 0;
+        padding-left: 16px;
+        font-family: "Fresca", sans-serif;
+        font-size: 24px;
+        line-height: 26px; }
+        footer .footer-wrap .footer_logo p span {
+          font-family: "Fresca", sans-serif;
+          display: block;
+          font-size: 11px;
+          text-align: center;
+          line-height: 12px;
+          letter-spacing: -0.5px; }
+    footer .footer-wrap .footer_text {
+      line-height: 20px;
+      margin-top: 51px;
+      margin-left: 307px;
+      width: 300px;
+      color: #d1d1d1;
+      font-family: "Fresca", sans-serif;
+      font-size: 15px; }
+    footer .footer-wrap .footer-cr {
+      margin-left: 315px;
+      margin-top: 72px;
+      letter-spacing: 0.5px;
+      color: #d1d1d1;
+      font-family: "Fresca", sans-serif; }

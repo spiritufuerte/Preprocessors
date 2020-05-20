@@ -1,0 +1,323 @@
+@mixin container {
+  width: 1264px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin links {
+  font-family: $font-family-text;
+  color: $futter_text_color;
+}
+
+@mixin span-block {
+  font-family: $font-family-title;
+  display: block;
+  font-size: 11px;
+  text-align: center;
+  line-height: 12px;
+  letter-spacing: -0.5px;
+}
+
+@mixin p-block {
+  font-weight: bold;
+  margin: 0;
+  padding-left: 16px;
+  font-family: $font-family-title;
+  font-size: 24px;
+  line-height: 26px;
+}
+
+@mixin button-mixin {
+  background-color: $button-color;
+  border: none;
+  color: white;
+  padding: 15px 46px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 17px;
+  font-weight: bold;
+  font-family: $font-family-text;
+}
+
+%color-block {
+  z-index: -1;
+  position: absolute;
+  content: '';
+  background: $bacground-box-color;
+}
+
+body {
+  font-family: $font-family-text;
+  margin: 0;
+  background-color: $body-bg-color;
+}
+
+header {
+  border-bottom-right-radius: 630px 290px;
+  background-position: center;
+  background-size: auto;
+  background-image: url(#{$header-bacground-image1});
+  overflow: hidden;
+  padding-bottom: 180px;
+  padding-top: 20px;
+
+
+  .header-wrap {
+    @include container;
+
+    .landing-logo {
+      display: flex;
+      align-items: center;
+      color: $font-header-color;
+
+      p {
+        @include p-block;
+
+        span {
+          @include span-block;
+        }
+      }
+    }
+
+    .header_heading {
+      position: relative;
+      z-index: 2;
+      margin-top: 80px;
+      margin-bottom: 40px;
+      width: 500px;
+      line-height: 1;
+      letter-spacing: 2px;
+      font-size: 70px;
+      font-weight: bold;
+      color: $font-header-color;
+
+      &::before {
+        @extend %color-block;
+        top: 90px;
+        width: 309px;
+        height: 52px;
+
+      }
+    }
+
+    .header_text {
+      display: block;
+      font-family: $font-family-title;
+      white-space: pre-line;
+      text-align: left;
+      letter-spacing: 0.4px;
+      color: $color-header-text;
+      margin-bottom: 61px;
+      line-height: 25px;
+    }
+
+    .header_button {
+      @include button-mixin;
+    }
+
+    .login {
+      font-family: $font-family-text;
+      padding-left: 153px;
+      color: white;
+      font-size: 21px;
+      word-spacing: -0.3px;
+    }
+
+  }
+}
+
+main {
+  overflow: hidden;
+
+  .section_text {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    font-size: 43px;
+    font-weight: 600;
+    font-family: $font-family-text;
+    color: $font-header-color;
+    line-height: 40px;
+  }
+
+  &::before {
+    @extend %color-block;
+    top: 774px;
+    left: 798px;
+    width: 196px;
+    height: 52px;
+  }
+
+  .section_card_wrap {
+    width: 990px;
+    margin: 0 auto;
+
+    .section_card {
+      padding: $padding_section_card;
+      background-color: $section_card_footer_color;
+      margin: 27px 30px;
+      display: flex;
+      justify-content: space-between;
+      border-radius: 7px;
+
+      @each $name, $width in $card_imgs {
+        &:nth-child(#{$name}) .section_card_img {
+          width: $width;
+        }
+      }
+
+      .section_card_img {
+        flex-shrink: 0;
+        height: 240px;
+        border-radius: 5px;
+      }
+
+      .section_card_right_container {
+        text-align: center;
+        width: 70%;
+        margin: 0 84px 0;
+
+        &:nth-child(2) .section_card_heading {
+          font-family: $font-family-text;
+        }
+
+        .section_card_heading {
+          font-weight: 600;
+          font-family: $font-family-title;
+          font-size: 24px;
+          color: white;
+          letter-spacing: 0.1px;
+          word-spacing: -1px;
+          margin-top: 29px;
+        }
+
+        .section_card_text {
+          font-size: 18px;
+          text-align: justify;
+          line-height: 23px;
+          letter-spacing: -0.6px;
+          margin-bottom: 15px;
+          word-spacing: $s_card_text_lspacing;
+          font-family: $font-family-title;
+          color: $futter_text_color;
+        }
+
+        .section_link {
+          @include links;
+        }
+      }
+    }
+  }
+
+  .section_banner {
+    display: flex;
+    border-radius: 5px;
+    margin-top: 144px;
+    height: 150px;
+    background: $line-gradient-banner;
+    width: 988px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+
+    &:before {
+      content: '';
+      width: 100vw;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%);
+      height: 50%;
+      bottom: 0;
+      background-color: $section_card_footer_color;
+      z-index: -1;
+    }
+
+    .section_banner_text_wrap {
+      width: 631px;
+
+      &::after {
+        z-index: 1;
+        position: absolute;
+        content: '';
+        background: $bacground-box-color;
+        margin-top: -102px;
+        margin-left: 229px;
+        width: 67px;
+        height: 48px;
+      }
+
+      .section_banner_heading {
+        position: relative;
+        z-index: 2;
+        margin-top: 20px;
+        font-family: $font-family-text;
+        font-size: 31px;
+        font-weight: bold;
+        text-align: center;
+        word-spacing: -0.6px;
+        color: $font-header-color;
+        margin-bottom: 10px;
+      }
+
+      .section_banner_text {
+        margin-top: 20px;
+        margin-left: 106px;
+        font-family: $font-family-title;
+        color: $futter_text_color;
+        word-spacing: 2px;
+      }
+    }
+
+    .section_banner_button {
+      margin: 49px 106px;
+      @include button-mixin;
+    }
+  }
+}
+
+footer {
+  margin: 0;
+  background-color: $section_card_footer_color;
+
+  .footer-wrap {
+    @include container;
+    height: 171px;
+    display: flex;
+    color: #fff;
+
+    .footer_logo {
+      display: flex;
+      align-items: center;
+      margin-top: -5px;
+      color: $futter_text_color;
+
+      p {
+        @include p-block;
+
+        span {
+          @include span-block;
+        }
+      }
+    }
+
+    .footer_text {
+      line-height: 20px;
+      margin-top: 51px;
+      margin-left: 307px;
+      width: 300px;
+      color: $futter_text_color;
+      font-family: $font-family-title;
+      font-size: 15px;
+    }
+
+    .footer-cr {
+      margin-left: 315px;
+      margin-top: 72px;
+      letter-spacing: 0.5px;
+      color: $futter_text_color;
+      font-family: $font-family-title;
+    }
+  }
+
+}
